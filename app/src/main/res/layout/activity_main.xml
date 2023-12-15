@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/mainLayout">
+
+    <!-- Toolbar / Navbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="GAH">
+
+
+        <Button
+            android:id="@+id/loginButtonMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Hotel Name -->
+            <TextView
+                android:id="@+id/hotelName"
+                android:layout_width="385dp"
+                android:layout_height="wrap_content"
+                android:text="Welcome to Grand Atma Hotel"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:layout_marginTop="36dp"
+                android:src="@drawable/hotel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/hotelDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grand Atma Hotel is a classy hotel in Yogyakarta City that will be the best choice for you and your family for a comfortable and enjoyable holiday. Hotel Grand Atma Hotel offers various facilities to enhance your stay experience. With extra bed facilities, you can ensure comfortable and spacious accommodation for your entire group. Additionally, take advantage of the convenient laundry service to keep your clothes fresh and clean. Pamper yourself with a relaxing massage to unwind after a day of exploring the city. For business travelers, the hotel provides fully equipped meeting rooms for your professional needs. Start your day with a delicious breakfast served at the hotel."
+                android:justificationMode="inter_word"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp" />
+
+<!--            &lt;!&ndash; Room List &ndash;&gt;-->
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/roomRecyclerView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="16dp" />-->
+
+            <TextView
+                android:id="@+id/TittleRoom"
+                android:layout_width="385dp"
+                android:layout_height="wrap_content"
+                android:text="Hotel And Bedroom Type"
+                android:layout_marginTop="30dp"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <!-- CardView pertama -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/junior"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Junior Room"
+                        android:textSize="20sp"
+                        android:padding="16dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="The Junior Room is a two-person retreat featuring an air conditioner, free Wi-Fi, and a double-sized bed with an additional twin-sized bed. With 24-hour room service and access to a serene swimming pool, it offers both comfort and convenience for a relaxing stay."
+                        android:padding="16dp"
+                        android:justificationMode="inter_word"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- CardView kedua -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/exe"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Execute Room"
+                        android:textSize="20sp"
+                        android:padding="16dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="The Executive Room is a two-person retreat featuring an air conditioner, free Wi-Fi, and a double-sized bed with an additional twin-sized bed. With 24-hour room service and access to a serene swimming pool, it offers both comfort and convenience for a relaxing stay."
+                        android:padding="16dp"
+                        android:justificationMode="inter_word"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/doubles"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Double Deluxe Room"
+                        android:textSize="20sp"
+                        android:padding="16dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="The Double Deluxe Room is a two-person retreat featuring an air conditioner, free Wi-Fi, and a double-sized bed with an additional twin-sized bed. With 24-hour room service and access to a serene swimming pool, it offers both comfort and convenience for a relaxing stay."
+                        android:padding="16dp"
+                        android:justificationMode="inter_word"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/superior"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Superior Room"
+                        android:textSize="20sp"
+                        android:padding="16dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="The Superior Room is a two-person retreat featuring an air conditioner, free Wi-Fi, and a double-sized bed with an additional twin-sized bed. With 24-hour room service and access to a serene swimming pool, it offers both comfort and convenience for a relaxing stay."
+                        android:padding="16dp"
+                        android:justificationMode="inter_word"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+
+
+
